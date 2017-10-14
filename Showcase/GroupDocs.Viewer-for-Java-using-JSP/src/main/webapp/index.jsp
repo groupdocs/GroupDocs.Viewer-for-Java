@@ -1,7 +1,7 @@
-<%@ page import="com.groupdocs.ui.Document" %>
+<%@ page import="com.groupdocs.ui.Document" pageEncoding="utf-8" %>
 <%
     int pageNumber = 1;
-    String filename = "demo.docx";
+    String filename = "Docx4j_GettingStarted.pdf";
     if (request.getParameterMap().containsKey("page")) {
         pageNumber = Integer.valueOf(request.getParameter("page"));
     }

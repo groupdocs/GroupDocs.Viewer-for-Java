@@ -185,7 +185,7 @@ public class ViewerController {
 			if (!DotNetToJavaStringHelper.isNullOrEmpty(params.getPreloadPagesCount().toString())
 					&& params.getPreloadPagesCount().intValue() > 0) {
 				htmlOptions.setPageNumber(1);
-				htmlOptions.setCountPagesToConvert(params.getPreloadPagesCount().intValue());
+				htmlOptions.setCountPagesToRender(params.getPreloadPagesCount().intValue());
 			}
 
 			String[] cssList = null;
@@ -367,7 +367,7 @@ public class ViewerController {
 	@RequestMapping(value = "/GetResourceForHtml")
 	@ResponseBody
 	public ResponseEntity<InputStreamResource> GetResourceForHtml(@RequestParam String documentPath, int pageNumber,
-			String resourceName) {
+			String resourceName) throws Throwable {
 		if (!DotNetToJavaStringHelper.isNullOrEmpty(resourceName) && resourceName.indexOf("/") >= 0) {
 			resourceName = resourceName.replace("/", "");
 		}
@@ -449,7 +449,7 @@ public class ViewerController {
 
 		HtmlOptions htmlOptions = new HtmlOptions();
 		htmlOptions.setPageNumber(parameters.getPageIndex() + 1);
-		htmlOptions.setCountPagesToConvert(1);
+		htmlOptions.setCountPagesToRender(1);
 		htmlOptions.setResourcesEmbedded(true);
 		htmlOptions.setHtmlResourcePrefix(
 				"/GetResourceForHtml?documentPath=" + parameters.getPath() + "&pageNumber={page-number}&resourceName=");
