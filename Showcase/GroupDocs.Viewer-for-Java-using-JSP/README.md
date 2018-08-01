@@ -1,3 +1,5 @@
+> ## *Showcases in this directory are not updated and maintained anymore. The source code is kept here for reference only. For latest updates, checkout our [new and feature-rich sample applications](https://github.com/groupdocs-viewer).*
+
 # GroupDocs.Viewer for Java using JSP
 
 This application allows user to view document in browser and the good thing about this project is, it has made document view more secure. User cannot download the rendered document.

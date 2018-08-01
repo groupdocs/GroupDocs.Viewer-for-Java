@@ -19,21 +19,26 @@ import javax.imageio.ImageIO;
 import com.groupdocs.viewer.config.ViewerConfig;
 import com.groupdocs.viewer.domain.image.PageImage;
 import com.groupdocs.viewer.handler.ViewerImageHandler;
+import com.groupdocs.viewer.metered.Metered;
 
 public class Utilities {
 
 	// ExStart:CommonProperties
+	public static final String TEST_BUCKET = "usman-aziz-test-bucket";
+	public static final String ACCESS_KEY = "xxxxxxxxxxxxxxx";
+	public static final String SECRET_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 	
-	public static final Path storagePath = getProjectBaseDir().resolve("Data/Storage");
-	public static final Path tempPath = getProjectBaseDir().resolve("Data/temp");
-	public static final Path licensePath = getProjectBaseDir().resolve("GroupDocs.Total.Java.lic");
-	public static final List<String> customFontDirs = Arrays.asList(getProjectBaseDir().resolve("Data/Fonts").toString());
-	//Generated html files will be saved in Html folder with name starting with output_
-	public static final Path outputHtmlPath = getProjectBaseDir().resolve("Data/Output/Html/output_");
-	//Generated image files will be saved in Images folder with name starting with output_
-	public static final Path outputImagePath = getProjectBaseDir().resolve("Data/Output/Images/output_");
-	//Generated files will be saved in Output folder with name starting with output_
-	public static final Path outputPath = getProjectBaseDir().resolve("Data/Output/output_");
+	public static final Path STORAGE_PATH = getProjectBaseDir().resolve("Data/Storage");
+	public static final Path TEMP_PATH = getProjectBaseDir().resolve("Data/temp");
+	public static final Path LICENSE_PATH = getProjectBaseDir().resolve("GroupDocs.Total.Java.lic");
+	public static final List<String> customFontDirs = Arrays
+			.asList(getProjectBaseDir().resolve("Data/Fonts").toString());
+	// Generated html files will be saved in Html folder with name starting with output_
+	public static final Path OUTPUT_HTML_PATH = getProjectBaseDir().resolve("Data/Output/Html/output_");
+	// Generated image files will be saved in Images folder with name starting with output_
+	public static final Path OUTPUT_IMAGE_PATH = getProjectBaseDir().resolve("Data/Output/Images/output_");
+	// Generated files will be saved in Output folder with name starting with output_
+	public static final Path OUTPUT_PATH = getProjectBaseDir().resolve("Data/Output/output_");
 
 	// ExEnd:CommonProperties
 
@@ -46,25 +51,12 @@ public class Utilities {
 		try {
 			// Setup license
 			com.groupdocs.viewer.licensing.License lic = new com.groupdocs.viewer.licensing.License();
-			lic.setLicense(licensePath.toString());
+			lic.setLicense(LICENSE_PATH.toString());
 		} catch (Exception exp) {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();
 		}
 	}
-
-	public static Path getProjectBaseDir() {
-		Properties props = new Properties();
-		try {
-			InputStream i = Utilities.class.getResourceAsStream("/project.properties");
-			props.load(i);
-		} catch (IOException x) {
-			throw new RuntimeException(x);
-		}
-		return FileSystems.getDefault().getPath(props.getProperty("project.basedir"));
-	}
-
-	// ExEnd:ApplyLicenseFromFile
 
 	// ExStart:ApplyLicenseFromStreamObj
 	/**
@@ -87,7 +79,37 @@ public class Utilities {
 	}
 
 	// ExEnd:ApplyLicenseFromStreamObj
+	public static Path getProjectBaseDir() {
+		Properties props = new Properties();
+		try {
+			InputStream i = Utilities.class.getResourceAsStream("/project.properties");
+			props.load(i);
+		} catch (IOException x) {
+			throw new RuntimeException(x);
+		}
+		return FileSystems.getDefault().getPath(props.getProperty("project.basedir"));
+	}
 
+	// ExEnd:ApplyLicenseFromFile
+
+	// ExStart:UseMeteredLicense
+		/**
+		 * This method uses Metered license
+		 * 
+		 */
+		public static void applyMeteredLicense() {
+
+			try {
+				// Set metered key
+				Metered metered = new Metered();
+				metered.setMeteredKey("public_key","private_key");
+				
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+				exp.printStackTrace();
+			}
+		}
+		
 	// ExStart:SaveAsImage
 	/**
 	 * This method writes input stream to output image file
@@ -102,7 +124,7 @@ public class Utilities {
 		try {
 			// Write input stream to output file
 			ImageIO.write(ImageIO.read(inputStream), imageFormat,
-					new File(outputImagePath + getFileNameWithoutExtension(fileName) + "." + imageFormat));
+					new File(OUTPUT_IMAGE_PATH + getFileNameWithoutExtension(fileName) + "." + imageFormat));
 		} catch (Exception exp) {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();
@@ -125,8 +147,8 @@ public class Utilities {
 		try {
 
 			// Initialize PrintWriter for output file
-			PrintWriter out = new PrintWriter(outputHtmlPath.toString() + getFileNameWithoutExtension(outputFileName) + ".html",
-					"UTF-8");
+			PrintWriter out = new PrintWriter(
+					OUTPUT_HTML_PATH.toString() + getFileNameWithoutExtension(outputFileName) + ".html", "UTF-8");
 
 			// Write file content in
 			out.println(fileContent);
@@ -155,7 +177,7 @@ public class Utilities {
 		try {
 
 			// Create stream for output file
-			OutputStream outputStream = new FileOutputStream(outputPath + fileName);
+			OutputStream outputStream = new FileOutputStream(OUTPUT_PATH + fileName);
 			int read = 0;
 			byte[] bytes = new byte[1024];
 
@@ -190,7 +212,7 @@ public class Utilities {
 
 			// Create stream for output file
 			OutputStream outputStream = new FileOutputStream(
-					outputPath + getFileNameWithoutExtension(fileName) + fileExtension);
+					OUTPUT_PATH + getFileNameWithoutExtension(fileName) + fileExtension);
 			int read = 0;
 			byte[] bytes = new byte[1024];
 
@@ -270,14 +292,13 @@ public class Utilities {
 			// Setup GroupDocs.Viewer config
 			ViewerConfig config = new ViewerConfig();
 			// Set storage path
-			config.setStoragePath(storagePath.toString());
-			config.setTempPath(tempPath.toString());
+			config.setStoragePath(STORAGE_PATH.toString()); 
 			// Set cache to true for cache purpose
-			config.setCachePath(tempPath.toString());
+			config.setCachePath(TEMP_PATH.toString());
 			// Add custom fonts directories to FontDirectories list
 			config.setFontDirectories(customFontDirs);
 			config.setUseCache(false);
-			//Set default Font Name
+			// Set default Font Name
 			config.setDefaultFontName("Calibri");
 			return config;
 
@@ -287,37 +308,28 @@ public class Utilities {
 			return null;
 		}
 	}
-	public static void GetDocumentRepresentationFromUri() throws Throwable
-	{
-		// Setup GroupDocs.Viewer config
-		ViewerConfig config = new ViewerConfig();
-		config.setStoragePath("C:\\storage");
-		 
-		// Create image handler
-		ViewerImageHandler imageHandler = new ViewerImageHandler(config);
-		URI uri = new URI("http://groupdocs.com/images/banner/carousel2/signature.png");
-		 
-		// Get pages by absolute path
-		List<PageImage> pages = imageHandler.getPages(uri);
-		System.out.println("Page count: " + pages.size());
-	}
+    // ExEnd:GetConfiguration
 	
-	public static void GetDocumentRepresentationFromInputStream() throws Throwable
-	{
+	/**
+	 * Cleans up temp files
+	 */
+	public static void cleanupTempFiles() {
+		try {
+			// ExStart:cleanupTempFiles
+			// Setup GroupDocs.Viewer config
+			ViewerConfig config = new ViewerConfig();
+			config.setStoragePath(STORAGE_PATH.toString());
+			   
+			// Create image or HTML handler
+			ViewerImageHandler handler = new ViewerImageHandler(config);
+			  
+			// Cleanup temporary files
+			handler.clearTempFiles();
+			// ExEnd:cleanupTempFiles
 
-		// Setup GroupDocs.Viewer config
-		ViewerConfig config = new ViewerConfig();
-		config.setStoragePath("C:\\storage");
-		 
-		// Create image handler
-		ViewerImageHandler imageHandler = new ViewerImageHandler(config);
-		 
-		FileInputStream fileStream = new FileInputStream("C:\\storage\\word.doc");
-		 
-		// Get pages by absolute path
-		List<PageImage> pages = imageHandler.getPages(fileStream, "word.doc");
-		System.out.println("Page count: " + pages.size());
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace(); 
+		}
 	}
-
-	// ExEnd:GetConfiguration
 }

@@ -1,6 +1,10 @@
+> ## *Showcases in this directory are not updated and maintained anymore. The source code is kept here for reference only. For latest updates, checkout our [new and feature-rich sample applications](https://github.com/groupdocs-viewer).*
+
 # GroupDocs.Viewer for Java using Servlets API
 
 This application allows user to view document in Html and Image representation. User can view thumbnails, view pagination, zoom in, zoom out, download and print document.
+
+![GroupDocs Viewer](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/blob/master/Showcase/GroupDocs.Viewer-for-Java-using-Servlets/GroupDocs-for-Java-Servlets-API-App.png)
 
 # Pre-Requisites
 
