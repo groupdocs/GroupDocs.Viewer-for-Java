@@ -1,32 +1,34 @@
+# GroupDocs.Viewer for Java - Examples
 
-## GroupDocs.Viewer for Java Examples
+Java API usage examples for [GroupDocs.Viewer for Java](https://products.groupdocs.com/viewer/java) with sample documents.
 
-This package contains Java Example Projects for GroupDocs.Viewer for Java and sample input docucuments/templates.
+GroupDocs.Viewer for Java supports over 170 document formats. View PDF, DOCX, PPT, XLS, and many more in HTML5, image, or PDF mode with fast and high-quality rendering. Process documents page-by-page, all at once, or by custom page range. Customize output with watermarks, page rotation/reordering, and text extraction with coordinates.
 
-GroupDocs.Viewer for Java is an API which provides the technology to create powerful document viewer component that allows you to display over 50 document formats in your Java applications. The viewer can both rasterize documents and convert them to SVG+HTML+CSS, delivering true-text high-fidelity rendering. Supported file formats include: Microsoft Office, Visio, Project, and Outlook documents, PDFs, AutoCAD, image files (TIFF, JPG, BMP, GIF, TIFF, etc.) and more. 
+These examples demonstrate **library API usage** in standalone Java code. They are intended for learning and integration reference — not as a deployable web service. For web UI samples, see the [Demos](../Demos) folder (demo applications only, not for production).
 
-<p align="center">
+## How to Run
 
-  <a title="Download complete GroupDocs.Viewer for Java source code" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/archive/master.zip"> 
-    <img src="https://camo.githubusercontent.com/11839cd752a2d367f3149c7bee1742b68e4a4d37/68747470733a2f2f7261772e6769746875622e636f6d2f4173706f73654578616d706c65732f6a6176612d6578616d706c65732d64617368626f6172642f6d61737465722f696d616765732f646f776e6c6f61645a69702d427574746f6e2d4c617267652e706e67" data-canonical-src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" style="max-width:100%;">
-  </a>
-</p>
+#### Using an IDE
 
-## How to Run the Examples?
+Follow the [how to run examples](https://docs.groupdocs.com/viewer/java/how-to-run-examples/) guide for Eclipse IDE setup.
 
-It is assumed that maven is installed and configured in your system path. You can edit the project by opening in your favorite IDE like NetBeans, Eclipse, and IntelliJ IDEA.
+#### From command line
 
-You may find following resources helpful:
+Requires [Maven](https://maven.apache.org/download.cgi) installed and on your system path.
 
-1. Learn how to <a href="http://www.tutorialspoint.com/maven/maven_environment_setup.htm">install and configure</a> Maven - Environment Setup
-2. Maven <a href="http://www.tutorialspoint.com/maven/maven_netbeans.htm">support</a> for NetBeans
-3. Maven <a href="http://www.tutorialspoint.com/maven/maven_intellij_idea.htm">support</a> for IntelliJ IDEA
-4. Maven <a href="http://www.tutorialspoint.com/maven/maven_eclispe_ide.htm">support</a> for Eclipse IDE
+Uncomment the examples you want to run in `RunExamples.java`, then:
 
-# Apply License
+```bash
+cd Examples
+mvn compile exec:java
+```
 
-Follow below steps if you have product license
+## Licensing
 
-1. Open Utilities.java
-2. Set "licensePath" variable to your license path
-3. Call applyLicenseFromFile method from MainClass
+The license is not included in this repository. GroupDocs.Viewer will run in [evaluation mode](https://docs.groupdocs.com/viewer/java/evaluation-limitations-and-licensing-of-groupdocs-viewer/) with limitations.
+
+To test all features, request a [temporary license](https://purchase.groupdocs.com/temporary-license) and place it in the `resources/` folder. Update the license file name in `Utils.java`.
+
+## Resources
+
+[Product Page](https://products.groupdocs.com/viewer/java) | [Documentation](https://docs.groupdocs.com/viewer/java/) | [API Reference](https://apireference.groupdocs.com/java/viewer) | [Online Demo](https://products.groupdocs.app/viewer/family) | [Blog](https://blog.groupdocs.com/category/viewer/) | [Free Support](https://forum.groupdocs.com/c/viewer) | [Temporary License](https://purchase.groupdocs.com/temporary-license)

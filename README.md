@@ -1,40 +1,130 @@
+# GroupDocs.Viewer for Java - Examples and Demo Projects
 
-# GroupDocs.Viewer-for-Java
+[GroupDocs.Viewer for Java](https://products.groupdocs.com/viewer/java) is a document viewer API that supports over 170 document formats including Microsoft Office, OpenOffice, PDF, CAD, Photoshop, Visio, images, archives, email messages and more.
 
-This package contains [Examples](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/) for [GroupDocs.Viewer for Java](https://products.groupdocs.com/viewer/java) that will help you in understanding the API's working and writing your own applications.
+Render documents to HTML5, PDF, or image formats with high-quality output. Process documents page-by-page, all at once, or by custom page range. Customize appearance with watermarks, page rotation/reordering, and text extraction with coordinates.
 
-GroupDocs.Viewer for Java is an API which provides the technology to create powerful document viewer component that allows you to display over 50 document formats in your Java applications. The viewer can both rasterize documents and convert them to SVG+HTML+CSS, delivering true-text high-fidelity rendering. Supported file formats include: Microsoft Office, Visio, Project, and Outlook documents, PDFs, AutoCAD, image files (TIFF, JPG, BMP, GIF, TIFF, etc.) and more. 
+## Important: Demo Applications Only
 
-<p align="center">
+The projects in the [Demos](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/Demos) folder and the Docker images published as [`groupdocs/viewer`](https://hub.docker.com/r/groupdocs/viewer) are **sample applications** intended to demonstrate [GroupDocs.Viewer for Java](https://products.groupdocs.com/viewer/java) features.
 
-  <a title="Download complete GroupDocs.Viewer for Java source code" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/archive/master.zip"> 
-    <img src="https://camo.githubusercontent.com/11839cd752a2d367f3149c7bee1742b68e4a4d37/68747470733a2f2f7261772e6769746875622e636f6d2f4173706f73654578616d706c65732f6a6176612d6578616d706c65732d64617368626f6172642f6d61737465722f696d616765732f646f776e6c6f61645a69702d427574746f6e2d4c617267652e706e67" data-canonical-src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" style="max-width:100%;">
-  </a>
-</p>
+They are **not** production-ready services and must **not** be exposed to the public internet without additional hardening.
 
+Before using a demo in any shared or production-like environment:
+
+- Run it on `localhost` or a trusted private network only
+- Do not publish Docker containers directly to the internet without authentication, a reverse proxy, and network restrictions
+- Treat file upload, browse, and download features as untrusted input — validate and sandbox file paths in your own integration
+- Add authentication, authorization, rate limiting, and logging appropriate for your security requirements
+- Keep GroupDocs.Viewer and all dependencies up to date
+
+For production integrations, use the library ([Examples](Examples), [documentation](https://docs.groupdocs.com/viewer/java/)) and implement your own secure document storage and API layer instead of deploying these demos as-is.
+
+## Repository Structure
 
 Directory | Description
 --------- | -----------
-[Examples](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/Examples)  | Contains the package of all Java examples and sample files that will help you learn how to use product features. 
-[Showcases](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/Showcase)  | Our native, simple, fully configurable and optimized web applications which allow you to manipulate documents through GroupDocs APIs without requiring any other commercial application.
+[Demos](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/Demos) | Demo projects for Spring, Dropwizard, Javalin, Ktor, Micronaut, and Compose Desktop.
+[Examples](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/Examples) | Java API usage examples with sample documents.
 
-<h2><a id="user-content-resources" class="anchor" href="#resources" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Resources</h2>
+## Demos
 
-<ul>
-<li><strong>Website:</strong> <a href="http://www.groupdocs.com">www.groupdocs.com</a></li>
-<li><strong>Product Home:</strong> <a href="https://products.groupdocs.com/viewer/java">GroupDocs.Viewer for Java</a></li>
-<li><strong>API Reference:</strong> <a href="https://apireference.groupdocs.com/java/viewer">GroupDocs.Viewer for Java API Reference Guide</a></li>
-<li><strong>Download:</strong> <a href="https://artifact.groupdocs.com/repo/com/groupdocs/groupdocs-viewer/">Download GroupDocs.Viewer for Java</a></li>
-<li><strong>Documentation:</strong> <a href="https://docs.groupdocs.com/display/viewerjava/Home">GroupDocs.Viewer for Java Documentation</a></li>
-<li><strong>Free Support:</strong> <a href="https://forum.groupdocs.com/c/viewer">GroupDocs.Viewer for Java Free Support Forum</a></li>
-<li><strong>Paid Support:</strong> <a href="https://helpdesk.groupdocs.com/">GroupDocs.Viewer for Java Paid Support Helpdesk</a></li>
-<li><strong>Blog:</strong> <a href="https://blog.groupdocs.com/category/groupdocs-viewer-product-family/">GroupDocs.Viewer for Java Blog</a></li>
-</ul>
-</article>
-  </div>
+All web demos run on `http://localhost:8080/viewer/` and provide document viewing with zoom, thumbnails, text search, page rotation, download/upload, and print support.
 
-</div>
- 
+| Demo | Framework | Language | Build | Version |
+|------|-----------|----------|-------|---------|
+| [Spring](Demos/Spring) | Spring Boot 2.5 | Java | `mvn clean spring-boot:run` | 26.5 |
+| [Dropwizard](Demos/Dropwizard) | Dropwizard 1.3 | Java | `mvn clean compile exec:java` | 26.5 |
+| [Javalin](Demos/Javalin) | Javalin 4.6 | Kotlin | `./gradlew run` | 26.5 |
+| [Ktor](Demos/Ktor) | Ktor | Kotlin | `./gradlew run` | 26.5 |
+| [Micronaut](Demos/Micronaut) | Micronaut 3.4 | Kotlin | `./gradlew run` | 26.5 |
+| [Compose](Demos/Compose) | Compose Desktop | Kotlin | `gradlew run` | 26.5 |
 
+The [Compose](Demos/Compose) demo is a standalone desktop application (not a web app).
 
- 
+## Docker
+
+Pre-built Docker images are available on [Docker Hub](https://hub.docker.com/r/groupdocs/viewer).
+
+```bash
+docker pull groupdocs/viewer:latest
+docker run -p 8080:8080 groupdocs/viewer:latest
+```
+
+**Security notice:** Docker images ship with demo defaults (e.g. upload and browse enabled, no authentication). Use them for local evaluation only. Do not expose port `8080` to untrusted networks without adding authentication, path validation, and other security controls required by your organization.
+
+Available image tags follow the pattern `{version}-java-{jdk}-bullseye-{framework}`:
+
+| Tag | JDK | Framework |
+|-----|-----|-----------|
+| `{ver}-java-openjdk8-bullseye-spring` | Eclipse Temurin 8 | Spring |
+| `{ver}-java-openjdk11-bullseye-spring` | Eclipse Temurin 11 | Spring |
+| `{ver}-java-openjdk18-bullseye-spring` | Eclipse Temurin 21 | Spring |
+| `{ver}-java-openjdk8-bullseye-dropwizard` | Eclipse Temurin 8 | Dropwizard |
+| `{ver}-java-openjdk11-bullseye-dropwizard` | Eclipse Temurin 11 | Dropwizard |
+| `{ver}-java-openjdk18-bullseye-dropwizard` | Eclipse Temurin 21 | Dropwizard |
+
+The `latest` tag points to the `openjdk18-bullseye-spring` variant.
+
+The [Docker Hub repository overview](https://hub.docker.com/r/groupdocs/viewer) is generated from [`docs/docker-hub-overview.md`](docs/docker-hub-overview.md) when the [Publish Docker Images](.github/workflows/docker-publish.yml) workflow runs with **Push** enabled.
+
+## Getting Started
+
+GroupDocs.Viewer for Java requires J2SE 8.0 (1.8) or above.
+
+Add the [GroupDocs repository](https://releases.groupdocs.com/java/repo/) to your Maven project:
+
+```xml
+<repository>
+    <id>GroupDocs Artifact Repository</id>
+    <url>https://releases.groupdocs.com/java/repo/</url>
+</repository>
+```
+
+Then add the dependency:
+
+```xml
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-viewer</artifactId>
+    <version>26.5</version>
+</dependency>
+```
+
+See the [installation guide](https://docs.groupdocs.com/viewer/java/installation/) for details.
+
+## Code Examples
+
+### Render DOCX as Responsive HTML
+
+```java
+Viewer viewer = new Viewer("sample.docx");
+HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
+viewOptions.setRenderResponsive(true);
+viewer.view(viewOptions);
+viewer.close();
+```
+
+### View DOCX as Protected PDF
+
+```java
+Viewer viewer = new Viewer("sample.docx");
+Security security = new Security();
+security.setDocumentOpenPassword("o123");
+security.setPermissionsPassword("p123");
+security.setPermissions(Permissions.ALLOW_ALL ^ Permissions.DENY_PRINTING);
+
+PdfViewOptions viewOptions = new PdfViewOptions(filePath);
+viewOptions.setSecurity(security);
+
+viewer.view(viewOptions);
+viewer.close();
+```
+
+## Licensing
+
+The license is not included in this repository. Without a license, GroupDocs.Viewer runs in [evaluation mode](https://docs.groupdocs.com/viewer/java/evaluation-limitations-and-licensing-of-groupdocs-viewer/). Request a temporary license at https://purchase.groupdocs.com/temporary-license.
+
+## Resources
+
+[Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/viewer/java) | [Documentation](https://docs.groupdocs.com/viewer/java/) | [API Reference](https://apireference.groupdocs.com/java/viewer) | [Online Demo](https://products.groupdocs.app/viewer/family) | [Blog](https://blog.groupdocs.com/category/viewer/) | [Free Support](https://forum.groupdocs.com/c/viewer) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
